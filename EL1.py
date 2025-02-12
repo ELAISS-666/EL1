@@ -19,10 +19,10 @@ except ModuleNotFoundError:
         os.system('pip install requests futures==2 > /dev/null')
 
 ###############[ Proxies ]###########
-os.system('rm -rf prox.txt')  
+os.system('rm -rf socks5.txt')  
 try:
     prox= requests.get('https://github.com/MAFIA-143/MR-MAFIA/blob/main/socks5.txt').text
-    open('prox.txt','w').write(prox)
+    open('socks5.txt','w').write(prox)
 except Exception as e:
     pass
 prox=open('socks5.txt','r').read().splitlines()
